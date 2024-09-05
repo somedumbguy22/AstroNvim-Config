@@ -17,6 +17,7 @@ return {
         request = "launch",
         startApps = true, -- for Phoenix projects
         projectDir = "${workspaceFolder}",
+        exitAfterTaskReturns = false,
         requireFiles = {
           "test/**/test_helper.exs",
           "test/**/*_test.exs",
