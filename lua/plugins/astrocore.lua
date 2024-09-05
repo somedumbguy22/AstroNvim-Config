@@ -60,6 +60,7 @@ return {
 
         ["<F2>"] = { "<cmd>CompilerOpen<cr>", desc = "CompilerOpen - TaskRunner" },
         ["<F3>"] = { "<cmd>CompilerToggleResults<cr>", desc = "CompilerToggleDisplay - TaskRunner" },
+        ["<leader>U"] = { "<cmd>UndotreeToggle<cr>", desc = "Undotree Window Toggle " },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
