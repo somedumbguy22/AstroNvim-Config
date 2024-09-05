@@ -8,4 +8,5 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.elixir-phoenix" },
   { import = "astrocommunity.editing-support.undotree" },
+  { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
 }
