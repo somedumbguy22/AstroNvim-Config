@@ -9,4 +9,5 @@ return {
   { import = "astrocommunity.pack.elixir-phoenix" },
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
+  { import = "astrocommunity.code-runner.compiler-nvim" },
 }
