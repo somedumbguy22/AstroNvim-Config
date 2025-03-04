@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Mason plugins
 
@@ -11,6 +11,7 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
+        "basedpyright",
         -- add more arguments for adding more language servers
       },
     },
@@ -22,6 +23,8 @@ return {
     opts = {
       ensure_installed = {
         "stylua",
+        "black",
+        "isort",
         -- add more arguments for adding more null-ls sources
       },
     },
@@ -29,11 +32,16 @@ return {
   {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
-    opts = {
-      ensure_installed = {
-        "python",
-        -- add more arguments for adding more debuggers
-      },
-    },
+    opts = function(_, opts)
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "python" })
+      if not opts.handlers then opts.handlers = {} end
+      opts.handlers.python = function() end -- make sure python doesn't get set up by mason-nvim-dap, it's being set up by nvim-dap-python
+    end,
+    -- opts = {
+    --   ensure_installed = {
+    --     "python",
+    --     -- add more arguments for adding more debuggers
+    --   },
+    -- },
   },
 }

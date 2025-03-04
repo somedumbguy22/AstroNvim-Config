@@ -7,6 +7,9 @@ if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- added this as part of python DAP debugging - not sure if needed
+vim.g.python3_host_prog = vim.fn.expand "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+
 -- validate that lazy is available
 if not pcall(require, "lazy") then
   -- stylua: ignore
