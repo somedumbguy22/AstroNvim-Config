@@ -8,6 +8,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.elixir-phoenix" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
   { import = "astrocommunity.code-runner.compiler-nvim" },
